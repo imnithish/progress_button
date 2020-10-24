@@ -41,18 +41,17 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
         val a = context.obtainStyledAttributes(
             attrs,
             R.styleable.ProgressButton)
-        a.recycle()
-
         val backgroundColor =
             a.getString(R.styleable.ProgressButton_buttonBackgroundColor) ?: "#BBBDCC"
+        val textColor = a.getString(R.styleable.ProgressButton_textColor) ?: "#000000"
         setBackgroundColor(Color.parseColor(backgroundColor))
-
         button?.apply {
             text = a.getString(R.styleable.ProgressButton_text) ?: ""
-            val textColor = a.getString(R.styleable.ProgressButton_textColor) ?: "#000000"
             setTextColor(Color.parseColor(textColor))
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 17f)
         }
+
+        a.recycle()
     }
 
     fun showProgress() {
