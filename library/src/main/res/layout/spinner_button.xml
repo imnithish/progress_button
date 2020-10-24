@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_centerInParent="true" />
+        android:background="#00000000"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        tools:text="Log in" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_centerInParent="true"
-        android:indeterminate="true"
+        android:background="#00000000"
+        android:indeterminateTint="#FFFFFF"
+        android:translationZ="50sp"
         android:visibility="invisible" />
 
 </merge>

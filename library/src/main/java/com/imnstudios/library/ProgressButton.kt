@@ -1,27 +1,33 @@
 package com.imnstudios.library
 
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.graphics.red
 
 class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
 
     private var progressBar: ProgressBar? = null
-    private var textView: TextView? = null
+    private var button: Button? = null
+
     var text: CharSequence?
         get() {
-            return textView?.text
+            return button?.text
         }
         set(value) {
-            textView?.text = value
+            button?.text = value
         }
+
+    var backgroundColor: String = "#BBBDCC"
+        set(value) {
+            setBackgroundColor(Color.parseColor(value))
+        }
+
 
     init {
 
@@ -29,8 +35,8 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val rootView = inflater.inflate(R.layout.spinner_button, this, true)
 
-        textView = rootView.findViewById(R.id.textView)
-        progressBar = rootView.findViewById(R.id.progressBar)
+        button = rootView.findViewById(R.id.button)
+        progressBar = rootView.findViewById(R.id.progress)
 
         val a = context.obtainStyledAttributes(
             attrs,
@@ -38,20 +44,25 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
         )
         a.recycle()
 
-        textView?.apply {
+        val backgroundColor =
+            a.getString(R.styleable.ProgressButton_buttonBackgroundColor) ?: "#BBBDCC"
+        setBackgroundColor(Color.parseColor(backgroundColor))
+
+        button?.apply {
             text = a.getString(R.styleable.ProgressButton_text) ?: ""
-            setTextColor(ContextCompat.getColor(context, R.color.primaryTextColor))
+            val textColor = a.getString(R.styleable.ProgressButton_textColor) ?: "#000000"
+            setTextColor(Color.parseColor(textColor))
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 17f)
         }
     }
 
     fun showProgress() {
-        textView?.visibility = View.INVISIBLE
+        button?.visibility = View.INVISIBLE
         progressBar?.visibility = View.VISIBLE
     }
 
     fun hideProgress() {
-        textView?.visibility = View.VISIBLE
+        button?.visibility = View.VISIBLE
         progressBar?.visibility = View.INVISIBLE
     }
 
