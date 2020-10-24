@@ -40,8 +40,7 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
         val a = context.obtainStyledAttributes(
             attrs,
-            R.styleable.ProgressButton, 0, 0
-        )
+            R.styleable.ProgressButton)
         a.recycle()
 
         val backgroundColor =
