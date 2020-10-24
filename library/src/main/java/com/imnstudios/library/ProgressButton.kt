@@ -65,7 +65,7 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
     }
 
     override fun setOnClickListener(onClick: OnClickListener?) {
-        rootView?.setOnClickListener(onClick)
+        button?.setOnClickListener(onClick)
     }
 
 }

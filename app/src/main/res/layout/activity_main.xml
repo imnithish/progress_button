@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.imnstudios.library.ProgressButton
+        android:id="@+id/hella"
         app:text = "hello"
         android:layout_width="match_parent"
         android:layout_height="50sp" />
