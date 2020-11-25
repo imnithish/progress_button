@@ -2,10 +2,7 @@ package com.imnstudios.library
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.BlendMode
-import android.graphics.BlendModeColorFilter
-import android.graphics.Color
-import android.graphics.PorterDuff
+import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.AttributeSet
@@ -66,6 +63,14 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
             progressBar?.indeterminateTintList = ColorStateList.valueOf(Color.parseColor(value))
         }
 
+    var font: Typeface?
+        get() {
+            return button?.typeface
+        }
+        set(value) {
+            button?.typeface = value
+        }
+
 
     init {
 
@@ -91,11 +96,6 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
                 TypedValue.COMPLEX_UNIT_SP,
                 a.getFloat(R.styleable.ProgressButton_textSize, 17f)
             )
-            if (a.getBoolean(R.styleable.ProgressButton_textFontFlag, false))
-                typeface = ResourcesCompat.getFont(
-                    context,
-                    a.getResourceId(R.styleable.ProgressButton_textFont, R.font.poppins_bold)
-                )
         }
         progressBar?.indeterminateTintList = ColorStateList.valueOf(
             Color.parseColor(

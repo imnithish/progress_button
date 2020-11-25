@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        login_button.buttonBackground = ContextCompat.getDrawable(this, R.drawable.rounded_background)
+        login_button.buttonBackground =
+            ContextCompat.getDrawable(this, R.drawable.rounded_background)
         login_button.backgroundColor = "#FF0563"
         login_button.setOnClickListener {
-            login_button.text= "Button was clicked!"
+            login_button.text = "Button was clicked!"
 
 //            login_button.textSize = f++
 //            i++
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
             login_button.backgroundColor = "#FF0000"
 
+            login_button.font =
+                ResourcesCompat.getFont(
+                    applicationContext,
+                    R.font.poppins
+                )
         }
 
 //        baseline.setOnClickListener {

@@ -4,8 +4,6 @@
         <attr name="text" format="string"/>
         <attr name="textColor" format="string"/>
         <attr name="textSize" format="float"/>
-        <attr name="textFontFlag" format="boolean"/>
-        <attr name="textFont" format="reference"/>
         <attr name="textStyle" format="string"/>
         <attr name="buttonBackgroundColor" format="string"/>
         <attr name="progressBarTint" format="string" />
