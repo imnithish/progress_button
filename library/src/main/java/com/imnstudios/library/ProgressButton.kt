@@ -1,3 +1,6 @@
+/**
+ * @author https://imnstudios.com/#/nitheeshag
+ */
 package com.imnstudios.library
 
 import android.content.Context
