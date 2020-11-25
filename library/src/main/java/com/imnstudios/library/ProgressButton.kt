@@ -2,7 +2,12 @@ package com.imnstudios.library
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.BlendMode
+import android.graphics.BlendModeColorFilter
 import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -30,7 +35,20 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
             return backgroundColor.toString()
         }
         set(value) {
-            setBackgroundColor(Color.parseColor(value))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                background.colorFilter =
+                    BlendModeColorFilter(Color.parseColor(value), BlendMode.SRC_ATOP)
+            } else {
+                background.setColorFilter(Color.parseColor(value), PorterDuff.Mode.SRC_ATOP)
+            }
+        }
+
+    var buttonBackground: Drawable?
+        get() {
+            return background
+        }
+        set(value) {
+            background = value
         }
 
     var textSize: Float?
