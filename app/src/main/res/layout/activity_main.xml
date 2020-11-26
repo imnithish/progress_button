@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:padding="20sp"
-    android:gravity="center"
     android:id="@+id/baseline"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20sp">
 
     <!--    <com.imnstudios.library.ProgressButton-->
     <!--        android:id="@+id/hella"-->
@@ -18,8 +18,9 @@
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        app:progressBarTint="#3F51B5"
+        android:textSize="15sp"
         app:buttonBackgroundColor="#FF7B7B"
-        app:text="LOG IN" />
+        app:progressBarTint="#3F51B5"
+        app:text="LOG IN"
+        app:textColor="#FFFFFF" />
 </LinearLayout>

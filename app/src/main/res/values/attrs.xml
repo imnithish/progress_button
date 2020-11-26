@@ -4,7 +4,6 @@
         <attr name="text" format="string"/>
         <attr name="textColor" format="string"/>
         <attr name="textSize" format="float"/>
-        <attr name="textStyle" format="string"/>
         <attr name="buttonBackgroundColor" format="string"/>
         <attr name="progressBarTint" format="string" />
 <!--        <attr name="progressBarSize" format="integer"/>-->
