@@ -26,14 +26,50 @@ dependencies {
 
 ## XML ATTRIBUTES
 ```
-    <com.imnstudios.theprogressbutton.ProgressButtonTest
-        android:id="@+id/login_button"
+    <com.imnstudios.library.ProgressButton
+        android:id="@+id/progress_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
+        android:elevation="4sp"
         app:buttonBackgroundColor="#FF7B7B"
         app:progressBarTint="#3F51B5"
         app:text="LOG IN"
         app:textColor="#FFFFFF" />
  ```
+
+
+
+## CUSTOMIZE PROGRAMMATICALLY
+To set background color:
+```
+progress_button.backgroundColor = "#6200EE"
+```
+To set background drawable:
+```
+progress_button.buttonBackground = ContextCompat.getDrawable(applicationContext, R.drawable.rounded_background)
+```
+Rounded background:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+    <corners
+            android:radius="4sp"/>
+
+    <solid android:color="@color/colorAccent" />
+</shape>
+```
+To set text:
+```
+progress_button.text = "Button was clicked!"
+```
+To set font:
+```
+login_button.font = ResourcesCompat.getFont(applicationContext, R.font.poppins)
+```
+
+
+
+
 
