@@ -30,11 +30,11 @@ dependencies {
         android:id="@+id/progress_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
         android:elevation="4sp"
         app:buttonBackgroundColor="#FF7B7B"
         app:progressBarTint="#3F51B5"
         app:text="LOG IN"
+        app:textSize="15"
         app:textColor="#FFFFFF" />
  ```
 
