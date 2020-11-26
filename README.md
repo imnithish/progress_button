@@ -66,7 +66,15 @@ progress_button.text = "Button was clicked!"
 ```
 To set font:
 ```
-login_button.font = ResourcesCompat.getFont(applicationContext, R.font.poppins)
+progress_button.font = ResourcesCompat.getFont(applicationContext, R.font.poppins)
+```
+To set text size:
+```
+progress_button.textSize = 17f
+```
+To set progress tint:
+```
+progress_button.progressBarTint = "#FFFFFF"
 ```
 
 
