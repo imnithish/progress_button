@@ -1,6 +1,5 @@
 # PROGRESS BUTTON
 is a custom button with built in progressbar and features customization options.
 
-![Demo](https://github.com/imnithish/progress_button/blob/master/progress_button_demo.gif)
 
-<img src="https://github.com/imnithish/progress_button/blob/master/progress_button_demo.gif" scale="2"/>
+<img src="https://github.com/imnithish/progress_button/blob/master/progress_button_demo.gif" width="250" height="400"/>
