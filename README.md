@@ -19,7 +19,7 @@ allprojects {
 Step 2. Add the dependency.
 ```
 dependencies {
-	        implementation 'com.github.imnithish:progress_button:Tag'
+	       implementation 'com.github.imnithish:progress_button:1.1.6'
 	}
 ```
 
