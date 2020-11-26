@@ -41,6 +41,11 @@ dependencies {
 
 
 ## CUSTOMIZE PROGRAMMATICALLY
+To show and hide progress:
+```
+progress_button.showProgress()
+progress_button.hideProgress()
+```
 To set background color:
 ```
 progress_button.backgroundColor = "#6200EE"
