@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.AttributeSet
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -76,6 +77,8 @@ class ProgressButton(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
 
     init {
+
+        gravity = Gravity.CENTER
 
         val inflater = context
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
